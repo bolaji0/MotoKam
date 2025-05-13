@@ -356,32 +356,140 @@ nav {
 }
 
 /* ===== Services Section ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .services-section {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--light-grey);
+    padding: 2rem 1rem;
+    background: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .carousel-container {
     position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1;
 }
 
 .services-carousel {
     display: flex;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    gap: var(--spacing-md);
-    padding: var(--spacing-sm) 0;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex: 1;
 }
 
 .services-carousel::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    display: none;
 }
 
 .service-card {
+    flex: 0 0 80%;
+    max-width: 300px;
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-icon {
+    margin-bottom: 1rem;
+}
+
+.service-icon svg {
+    width: 40px;
+    height: 40px;
+    color: #e63946;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .services-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-grey);
+} */
+
+/* .carousel-container {
+    position: relative;
+    overflow: hidden;
+} */
+
+/* .services-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+} */
+
+/* .services-carousel::-webkit-scrollbar {
+    display: none; 
+} */
+
+/* .service-card {
     flex: 0 0 300px;
     background-color: var(--white);
     border-radius: var(--border-radius-md);
@@ -462,7 +570,7 @@ nav {
 
 .carousel-btn.next {
     right: 10px;
-}
+} */
 
 /* ===== Map Section ===== */
 .map-section {
